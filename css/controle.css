@@ -1,0 +1,74 @@
+section#conteudo{
+    margin-left: auto;
+    margin-right: auto;
+}
+section#conteudo img#foto-imagem{
+    margin-left: auto;
+    margin-right: auto;
+}
+section#conteudo{
+    width: 1000px;
+    margin: auto;
+}
+
+img#menu{
+    float: left;
+    margin-top: -1175px; /* -30px e -100px*/
+}
+div#home{
+    float: left;
+    margin-top: -210px;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: -100px;
+    position: absolute;
+    z-index: 1;
+}
+.barra{
+    background-color: #333;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    margin-top: -1075px;
+    
+}
+nav{
+    width: 100%;
+    position: absolute;
+
+}
+nav a{
+    text-decoration: none;
+}
+.link{
+    background-color: #494950;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+.link:hover{
+    background-color: #050542;
+}
+
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
+}
+  
+

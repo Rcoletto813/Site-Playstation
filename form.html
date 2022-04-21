@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Playstation V</title>
+        <link rel="stylesheet" type="text/css" href="css/form.css"/>
+        <script>
+           function verificador(){
+               var nome = document.getElementById('cNome').value
+               var senha = document.getElementById('cSenha').value
+               var email = document.getElementById('cEmail').value
+               var rua = document.getElementById('cRua').value
+               var numero = document.getElementById('cNum').value
+               var cidade = document.getElementById('cCid').value
+               if(nome.length == 0 && senha.length == 0 && email.length == 0 && rua.length == 0 && numero.length == 0 && cidade.length == 0){
+                    alert('Preencha todos os campos!')
+                } else{
+                    gambiarra()
+                }
+           }
+           function receber(){
+                var nome = document.getElementById("cNome").value
+                return nome
+            }
+            function gambiarra(){
+                var a = receber()
+                alert(`Você (${a}) receberá o seu PlayStation V assim que disponivel!`)
+            }
+            function total(){
+                let quantidade = Number(document.getElementById('cQtd').value)
+                let tot = quantidade * 500
+                document.getElementById('preco').value = tot
+            }
+        </script>
+    </head>
+    <body>
+        <div id=principal>
+            <header id="cabeca">
+                <hgroup>
+                    <h1><strong>PlayStation 5</strong></h1>
+                    <h2 >A revolução dos consoles está chegando</h2>
+                </hgroup>
+                <img id=icone_ps5 src="imagens/logoPS5.png" width="320" height="auto"/> 
+            </header>
+            <section id="corpo">
+                <hgroup id="informacoes">
+                    <h4 style="font-family: Arial, Helvetica, sans-serif;">Tecnologia > Games</h4>
+                    <h2 style="font-family: Arial, Helvetica, sans-serif;">Saiba tudo sobre o novo console da Sony</h2>
+                    <h4 style="font-family: Arial, Helvetica, sans-serif;">Por Rodrigo Coletto</h4>
+                </hgroup>
+                <h2>Quero um PlayStation 5</h2>
+                <form name="formulario">
+                    <fieldset id="usuario">
+                        <legend>Indentificação do usuario</legend>
+                        <p>Nome: &nbsp;<input type="text" name="tNome" id="cNome" size=20 maxlength="45" placeholder="Nome completo" required/></p>
+                        <p>Senha: <input type="password" name="tSenha" id="cSenha" placeholder="Senha" required/></p>
+                        <p>Email: &nbsp;<input type="email" name="tEmail" id="cEmail" placeholder="Email" required/></p>
+                        <fieldset id="sexo"><legend>Sexo</legend>
+                            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label>
+                            <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+                            <input type="radio" name="tSexo" id="cPer"/> <label for="cPer">Outro</label></fieldset>
+                        <p>Data de nascimento <input type="date" name="tNasc" id="cNasc"/></p>
+                        
+                    </fieldset>
+                    <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                        <p>Endereço: <input type="text" name="tRua" id="cRua" placeholder="Endereço" required/></p>
+                        <p>Número: <input type="number" name="tNum" id="cNum" min="0" max="1999" required/></p>
+                        <p><label for="cEst">Estado:</label>
+                        <select name="tEst" id="cEst">
+                            <optgroup label="Região Sudeste"><option>Rio de Janeiro</option>
+                            <option>São Paulo</option>
+                            <option>Minas Gerais</option></optgroup>
+                            <optgroup label="Região Sul"><option>Paraná</option>
+                            <option>Santa Catarina</option>
+                            <option>Rio Grande do Sul</option></optgroup>
+                        </select></p>
+                         <p><label for="cCid">Cidade</label>
+                         <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades" required/></p>
+                        <datalist id="cidades">
+                            <option value="São Paulo"></option>
+                            <option value="Rio de Janeiro"></option>
+                            <option value="Amazonas"></option>
+                            <option value="Santos"></option>
+                        </datalist>
+                    </fieldset>
+                    <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                        <p><label for="cUrg">Grau de Urgência:</label>
+                        Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                        <p><label for="cMsg">Mensagem:</label>
+                        <textarea name="cMsg" id="cMsg" cols="36" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                    </fieldset>
+                    <fieldset id="pedido"><legend>Quero um PS5</legend>
+                            <label for="cPed">Gostaria de adquirir um Playstation 5 quando disponível</label></p>
+                            <p><label for="cQtd">Quantidade:</label>
+                            <input type="number" name="tQtd" id="cQtd" min="1" max="10" onchange="total()"></p>
+                            <p>Preço USD$: <input type="text" id="preco" readonly></p>
+                    </fieldset>
+                    
+                    <input id="enviar" type="submit" name="tEnviar" onclick="verificador()">
+                </form>
+            </section>
+
+            <footer id="rodape">
+                <p>Copyright &copy; 2020 - by Rodrigo Coletto</p>
+                <p><a href="http://www.objetivo.br/default.asp" target="_blank">Objetivo</a></p>
+            </footer>            
+        </div>
+
+        <div id="home">
+            <input type="checkbox" id="check"/>
+            <label id="icone" for="check">
+                <img id="menu" src="imagens/menu.png" width="100" height="auto"/>
+            </label>
+            <div class="barra">
+                <nav>
+                    <a href="index.html"><div class="link">HOME</div></a>
+                    <a href="espcs.html"><div class="link">ESPECIFICAÇÕES</div></a>
+                    <a href="controle.html"><div class="link">CONTROLE</div></a>
+                    <a href="fotos.html"><div class="link">FOTOS</div></a>
+                    <a href="form.html"><div class="link">QUERO UM PS5</div></a>
+                </nav>
+            </div>
+        </div>    
+    </body>
+    </html>

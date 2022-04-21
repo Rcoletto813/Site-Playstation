@@ -1,0 +1,141 @@
+body{
+    background-color: rgb(167, 167, 167);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+div#principal{
+    width: 900px;
+    margin: -20px auto 0px auto;
+    padding: 10px 10px 10px 10px;
+    box-shadow: 0px 0px 10px black;
+    background-color: white;
+}
+
+div#principal h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35pt;
+}
+
+div#principal h2{
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    font-size: 20pt;
+}
+
+div#principal h1{
+    color: rgb(95, 95, 95)
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .6);
+}
+header#cabeca{
+    border-bottom: 3px #606060 solid;
+}
+
+
+footer#rodape{
+    clear: both;
+    border-top: 3px solid #606060;
+}
+footer#rodape p{
+    text-align: center;
+}
+
+
+
+
+input, textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255,255,255,.8);
+}
+
+input:hover {
+    background-color: #dddddd;
+}
+
+legend{
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif
+}
+
+fieldset{
+    border-color: #cecece;
+    margin: 20px;
+}
+
+fieldset#sexo{
+    width: 700px;
+}
+
+input#enviar{
+    background-color: green;
+    width: 100px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+img#menu{
+    float: left;
+    margin-top: -1300px; /* -30px e -100px*/
+}
+div#home{
+    float: left;
+    margin-top: -210px;
+}
+#check{
+    display: none;
+}
+#icone{
+    cursor: pointer;
+    padding: -100px;
+    position: absolute;
+    z-index: 1;
+}
+.barra{
+    background-color: #333;
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+    margin-top: -1200px;
+    
+}
+nav{
+    width: 100%;
+    position: absolute;
+
+}
+nav a{
+    text-decoration: none;
+}
+.link{
+    background-color: #494950;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    transition: all .2s linear;
+    color: #f4f4f9;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+}
+.link:hover{
+    background-color: #050542;
+}
+
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav a .link{
+    opacity: 1;
+    margin-top: 0;
+    transition-delay: 0.2s;
+}

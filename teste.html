@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Teste</title>
+            <style>
+                body{
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background-color: #000;
+                }
+                p{
+                    position: relative;
+                    font-family: sans-serif;
+                    color: #fff;
+                    text-transform: uppercase;
+                    font-size: 10em;
+                    letter-spacing: 4px;
+                    overflow: hidden;
+                    background:  linear-gradient(90deg, #000, #fff, #000);
+                    background-repeat: no-repeat;
+                    background-size: 80%;
+                    animation: animate 3s linear infinite;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: rgba(255, 255, 255, .01);
+                }
+                @keyframes animate{
+                    0%{
+                        background-position: -500%;
+                    }
+                    100%{
+                        background-position: 500%;
+                    }
+                }
+
+                input#botao{
+                    background-color: rgb(0, 0, 0);
+                    border-radius: 4px;
+                    border: none;
+                    float: left;
+                    height: 80px;
+                    width: 200px;
+                    color: rgb(255, 255, 255);
+                    font-size: 15pt;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-top: 300px;
+                    margin-left: -250px;
+                }
+                input#botao:hover{
+                    cursor: pointer;
+                }
+            </style>
+    </head>
+    <body>
+        <p>PS5</p> 
+        <a href="index.html"><input type="button" id="botao" value="ENTRAR NO  SITE"/></a> 
+    </body>
+    </html>
